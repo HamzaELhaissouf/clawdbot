@@ -11,5 +11,5 @@ RUN npm install -g clawdbot
 WORKDIR /data
 RUN mkdir -p /data/workspace /data/.clawdbot
 
-# Set the entry point to run the gateway
-CMD ["clawdbot", "gateway", "--bind", "0.0.0.0", "--port", "8080"]
+# Start the gateway and bypass the missing config block
+CMD ["clawdbot", "gateway", "--bind", "0.0.0.0", "--port", "8080", "--allow-unconfigured"]
