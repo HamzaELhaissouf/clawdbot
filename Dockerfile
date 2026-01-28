@@ -12,4 +12,4 @@ WORKDIR /data
 RUN mkdir -p /data/workspace /data/.clawdbot
 
 # Start the gateway and bypass the missing config block
-CMD ["clawdbot", "gateway", "--bind", "0.0.0.0", "--port", "8080", "--allow-unconfigured"]
+CMD ["clawdbot", "gateway", "--bind", "lan", "--port", "8080", "--allow-unconfigured"]
